@@ -25,7 +25,7 @@
         <h1>投稿一覧</h1>
 
         @if($posts->isNotEmpty())
-            @@foreach ($posts as $post)
+            @foreach ($posts as $post)
                 <article>
                     <h2>{{$post->title}}</h2>
                     <p>{{$post->content}}</p>

@@ -11,7 +11,6 @@ class PostController extends Controller
 {
     public function index()
     {
-        // Userモデルのインスタンス（ここではAuth::user()）に対してposts()メソッドが使えるようになった理由は、5章でUserモデルとPostモデルのリレーションシップを設定したからです
         $posts = Auth::user()->posts()->orderBy('created_at','desc')->get();
         return view('posts.index', compact('posts'));
     }
